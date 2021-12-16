@@ -9,7 +9,7 @@ report 50000 "RSH Radion Show"
 
     dataset
     {
-        dataitem(RSHRadioShow; "RCA Rental Sales")
+        dataitem(RSHRadioShow; "RSH RCA Rental Sales")
         {
             column(No; "No.")
             {

@@ -2,7 +2,7 @@ page 50000 "RSH Rental Sales"
 {
     Caption = 'Rental Sales List';
     PageType = List;
-    SourceTable = "RCA Rental Sales";
+    SourceTable = "RSH RCA Rental Sales";
     ApplicationArea = All;
     UsageCategory = Lists;
     // SourceTableView = sorting("Royalty Cost", "Advertising Revenue");

@@ -3,7 +3,7 @@ page 50003 "RSH Radio Show Setup"
 
     Caption = 'Radio Show Setup';
     PageType = Card;
-    SourceTable = "RSH Radio Show Setup";
+    SourceTable = "RSH Rental Car Setup";
     ApplicationArea = All;
     UsageCategory = Administration;
 

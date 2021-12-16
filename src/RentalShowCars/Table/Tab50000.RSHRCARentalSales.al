@@ -1,10 +1,9 @@
 // 
-table 50000 "RCA Rental Sales"
+table 50000 "RSH RCA Rental Sales"
 {
     Caption = 'Rental Order Cars';
     DataClassification = CustomerContent;
-    // LookupPageId = "Rental Sales";
-    // DrillDownPageId = "Rental Sales";
+
 
     fields
     {
@@ -15,12 +14,12 @@ table 50000 "RCA Rental Sales"
 
             trigger OnValidate()
             var
-                RadioShowSetup: Record "RSH Radio Show Setup";
+                RetalSetup: Record "RSH Rental Car Setup";
                 NoSeriesMgt: Codeunit NoSeriesManagement;
             begin
                 if "No." <> xRec."No." then begin
-                    TestNoSeries(RadioShowSetup);
-                    NoSeriesMgt.TestManual(RadioShowSetup."Radio Show Nos.");
+                    TestNoSeries(RetalSetup);
+                    NoSeriesMgt.TestManual(RetalSetup."Radio Show Nos.");
                 end;
             end;
         }
@@ -31,7 +30,7 @@ table 50000 "RCA Rental Sales"
             DataClassification = CustomerContent;
             Editable = false;
         }
-        field(20; Saler_name; Text[30])
+        field(20; "Saler_name"; Text[30])
         {
             Caption = 'Saler name';
             DataClassification = CustomerContent;
@@ -78,7 +77,7 @@ table 50000 "RCA Rental Sales"
 
     local procedure InitInsert()
     var
-        RadioShowSetup: Record "RSH Radio Show Setup";
+        RadioShowSetup: Record "RSH Rental Car Setup";
         NoSeriesMgt: Codeunit NoSeriesManagement;
     begin
         if "No." <> '' then
@@ -88,7 +87,7 @@ table 50000 "RCA Rental Sales"
         // NoSeriesMgt.InitSeries(RadioShowSetup."Radio Show Nos.", xRec."No. Series", 0D, "No.", "No. Series");
     end;
 
-    local procedure TestNoSeries(var RadioShowSetup: Record "RSH Radio Show Setup")
+    local procedure TestNoSeries(var RadioShowSetup: Record "RSH Rental Car Setup")
     // var
     //     RadioShowNosErr: Label 'The field %1 should not be empty in Table %2!', Comment = '%1 = fieldCaption,%2 = TableCaption';
     begin
