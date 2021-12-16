@@ -10,7 +10,7 @@ table 50091 "RSH Radio Show detail"
         {
             Caption = 'Radion Show No.';
             DataClassification = CustomerContent;
-            TableRelation = "RSH Radio Show"."No.";
+            TableRelation = "RCA Rental Sales"."No.";
         }
         field(2; "Line No."; Integer)
         {

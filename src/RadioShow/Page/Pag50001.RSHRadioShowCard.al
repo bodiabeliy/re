@@ -2,7 +2,7 @@ page 50001 "RSH Radio Show Card"
 {
     Caption = 'Radio Show';
     PageType = Card;
-    SourceTable = "RSH Radio Show";
+    SourceTable = "RCA Rental Sales";
     PromotedActionCategories = 'New,Process,Report,Approve,Release,Posting,Prepare,Order,Request Approval,History,Print/Send,Navigate';
     layout
     {

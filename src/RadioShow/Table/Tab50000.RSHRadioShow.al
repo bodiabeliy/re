@@ -1,4 +1,4 @@
-table 50000 "RSH Radio Show"
+table 50000 "RCA Rental Sales"
 {
     Caption = 'Radio Show';
     DataClassification = CustomerContent;

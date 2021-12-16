@@ -1,6 +1,6 @@
 codeunit 50001 "RSH Post Radion Show"
 {
-    procedure PostRadioShow(RSHRadioShow: Record "RSH Radio Show")
+    procedure PostRadioShow(RSHRadioShow: Record "RCA Rental Sales")
     var
         RSHRadioShowdetail: Record "RSH Radio Show detail";
         RSHPostedRadioShow: Record "RSH Posted Radio Show";

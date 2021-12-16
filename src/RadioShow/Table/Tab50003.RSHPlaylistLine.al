@@ -26,7 +26,7 @@ Table 50003 "RSH Playlist Line"
         {
             TableRelation = IF (Type = Const(Resource)) Resource."No."
             ELSE
-            IF (Type = Const(Show)) "RSH Radio Show"."No."
+            IF (Type = Const(Show)) "RCA Rental Sales"."No."
             ELSE
             IF (Type = Const(Item)) Item."No.";
             Caption = 'Type';

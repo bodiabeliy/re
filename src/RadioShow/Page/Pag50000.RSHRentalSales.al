@@ -2,7 +2,7 @@ page 50000 "RSH Rental Sales"
 {
     Caption = 'Radio Shows List';
     PageType = List;
-    SourceTable = "RSH Radio Show";
+    SourceTable = "RCA Rental Sales";
     ApplicationArea = All;
     UsageCategory = Lists;
     CardPageId = "RSH Radio Show Card";

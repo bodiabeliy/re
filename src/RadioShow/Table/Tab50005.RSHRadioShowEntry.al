@@ -31,7 +31,7 @@ Table 50005 "RSH Radio Show Entry"
         {
             TableRelation = if (Type = const(Resource)) Resource."No."
             else
-            if (Type = const(Show)) "RSH Radio Show"."No."
+            if (Type = const(Show)) "RCA Rental Sales"."No."
             else
             if (Type = const(Item)) Item."No.";
             DataClassification = CustomerContent;
