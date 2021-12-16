@@ -29,9 +29,9 @@ page 50001 "RSH Radio Show Card"
                     NotBlank = true;
                     ShowMandatory = true;
                 }
-                field("Run Time"; Rec."Run Time")
+                field("Run Time"; Rec."Ordered_rental_period")
                 {
-                    ToolTip = 'Specifies the value of the Run Time field.';
+                    ToolTip = 'period of rental.';
                     ApplicationArea = All;
                 }
                 field("Host No."; Rec."Host No.")
@@ -44,127 +44,7 @@ page 50001 "RSH Radio Show Card"
                     ToolTip = 'Specifies the value of the Host Name field.';
                     ApplicationArea = All;
                 }
-                field("Average Listeners"; Rec."Average Listeners")
-                {
-                    ToolTip = 'Specifies the value of the Average Listeners  field.';
-                    ApplicationArea = All;
-                }
-                field("Audience Share"; Rec."Audience Share")
-                {
-                    ToolTip = 'Specifies the value of the Audience Share field.';
-                    ApplicationArea = All;
-                }
-                field("Advertising Revenue"; Rec."Advertising Revenue")
-                {
-                    ToolTip = 'Specifies the value of the Advertising Revenue field.';
-                    ApplicationArea = All;
-                }
-                field("Royalty Cost"; Rec."Royalty Cost")
-                {
-                    ToolTip = 'Specifies the value of the Royalty Cost field.';
-                    ApplicationArea = All;
-                }
-                field("Ads Planned Quantity"; Rec."Ads Planned Quantity")
-                {
-                    ToolTip = 'Specifies the value of the Ads Planned Quantity field.';
-                    ApplicationArea = All;
-                }
-                field(Frequency; Rec.Frequency)
-                {
-                    ToolTip = 'Specifies the value of the Frequency field.';
-                    ApplicationArea = All;
-                }
-                field("Frequency Enum"; Rec."Frequency Enum")
-                {
-                    ToolTip = 'Specifies the value of the Frequency field.';
-                    ApplicationArea = All;
-                }
 
-                field("News Duration"; Rec."News Duration")
-                {
-                    ToolTip = 'Specifies the value of the News Duration field.';
-                    ApplicationArea = All;
-                }
-                field("News Required"; Rec."News Required")
-                {
-                    ToolTip = 'Specifies the value of the News Required field.';
-                    ApplicationArea = All;
-                }
-                field("PSA Planned Quantity"; Rec."PSA Planned Quantity")
-                {
-                    ToolTip = 'Specifies the value of the PSA Planned Quantity field.';
-                    ApplicationArea = All;
-                }
-                field("Sports Duration"; Rec."Sports Duration")
-                {
-                    ToolTip = 'Specifies the value of the Sports Duration field.';
-                    ApplicationArea = All;
-                }
-                field("Sports Required"; Rec."Sports Required")
-                {
-                    ToolTip = 'Specifies the value of the Sports Required field.';
-                    ApplicationArea = All;
-                }
-                field("Weather Required"; Rec."Weather Required")
-                {
-                    ToolTip = 'Specifies the value of the Weather Required field.';
-                    ApplicationArea = All;
-                }
-                field("Weather Duration"; Rec."Weather Duration")
-                {
-                    ToolTip = 'Specifies the value of the Weather Duration field.';
-                    ApplicationArea = All;
-                }
-                field(SystemCreatedAt; Rec.SystemCreatedAt)
-                {
-                    ToolTip = 'Specifies the value of the SystemCreatedAt field.';
-                    ApplicationArea = All;
-                }
-                field(Email; Rec.Email)
-                {
-                    ToolTip = 'Specifies the value of the Emailr field.';
-                    ApplicationArea = All;
-                }
-                field("Item No."; Rec."Item No.")
-                {
-                    ToolTip = 'Specifies the value of the Item No. field.';
-                    ApplicationArea = All;
-                }
-                field("Item Description"; Rec."Item Description")
-                {
-                    ToolTip = 'Specifies the value of the Item Description field.';
-                    ApplicationArea = All;
-                }
-                field("Detail Average Qty"; Rec."Detail Average Qty")
-                {
-                    ToolTip = 'Specifies the value of the Detail Average Qty field.';
-                    ApplicationArea = All;
-                }
-                field("Detail count Qty"; Rec."Detail count Qty")
-                {
-                    ToolTip = 'Specifies the value of the Detail count Qty field.';
-                    ApplicationArea = All;
-                }
-                field("Detail sum Qty"; Rec."Detail sum Qty")
-                {
-                    ToolTip = 'Specifies the value of the Detail sum Qty field.';
-                    ApplicationArea = All;
-                }
-                field("Customer No."; Rec."Customer No.")
-                {
-                    ToolTip = 'Specifies the value of the Customer No. field.';
-                    ApplicationArea = All;
-                }
-                field(Discount; Rec.Discount)
-                {
-                    ToolTip = 'Specifies the value of the Discount field.';
-                    ApplicationArea = All;
-                }
-                field("Customer Name"; Rec."Customer Name")
-                {
-                    ToolTip = 'Specifies the value of the Customer No. field.';
-                    ApplicationArea = All;
-                }
             }
             part(SalesLines; "RSH Radio Show detail")
             {

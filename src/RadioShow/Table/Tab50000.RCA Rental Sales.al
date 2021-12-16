@@ -20,7 +20,6 @@ table 50000 "RCA Rental Sales"
                 if "No." <> xRec."No." then begin
                     TestNoSeries(RadioShowSetup);
                     NoSeriesMgt.TestManual(RadioShowSetup."Radio Show Nos.");
-                    "No. Series" := '';
                 end;
             end;
         }
@@ -38,9 +37,9 @@ table 50000 "RCA Rental Sales"
             NotBlank = true;
         }
 
-        field(40; "Run Time"; Duration)
+        field(40; "Ordered_rental_period"; Duration)
         {
-            Caption = 'Run Time';
+            Caption = 'Ordered rental period';
             DataClassification = CustomerContent;
         }
         field(50; "Host No."; Code[20])
@@ -53,186 +52,12 @@ table 50000 "RCA Rental Sales"
             Caption = 'Host Name';
             DataClassification = CustomerContent;
         }
-        field(100; "Average Listeners"; Decimal)
-        {
-            Caption = 'Average Listeners ';
-            DataClassification = CustomerContent;
-        }
-        field(110; "Audience Share"; Decimal)
-        {
-            Caption = 'Audience Share';
-            DataClassification = CustomerContent;
-        }
-        field(120; "Advertising Revenue"; Decimal)
-        {
-            Caption = 'Advertising Revenue';
-            DataClassification = CustomerContent;
-        }
-        field(130; "Royalty Cost"; Decimal)
-        {
-            Caption = 'Royalty Cost';
-            DataClassification = CustomerContent;
-        }
-        field(140; "No. Series"; Code[20])
-        {
-            Caption = 'No. Series';
-            Editable = false;
-            TableRelation = "No. Series";
-            DataClassification = CustomerContent;
-        }
-        field(1000; Frequency; Option)
-        {
-            OptionMembers = Hourly,Daily,Weekly,Monthly,"Every day";
-            Caption = 'Frequency';
-            DataClassification = CustomerContent;
-        }
-        field(1003; "Frequency Enum"; Enum "RSH Frequency")
-        {
-            Caption = 'Frequency';
-            DataClassification = CustomerContent;
-        }
-        field(1010; "PSA Planned Quantity"; Integer)
-        {
-            Caption = 'PSA Planned Quantity';
-            DataClassification = CustomerContent;
-        }
-        field(1020; "Ads Planned Quantity"; Integer)
-        {
-            Caption = 'Ads Planned Quantity';
-            DataClassification = CustomerContent;
-        }
-        field(1030; "News Required"; Boolean)
-        {
-            InitValue = true;
-            Caption = 'News Required';
-            DataClassification = CustomerContent;
-        }
-        field(1040; "News Duration"; Duration)
-        {
-            Caption = 'News Duration';
-            DataClassification = CustomerContent;
-        }
-        field(1050; "Sports Required"; Boolean)
-        {
-            Caption = 'Sports Required';
-            DataClassification = CustomerContent;
-        }
-        field(1060; "Sports Duration"; Duration)
-        {
-            Caption = 'Sports Duration';
-            DataClassification = CustomerContent;
-        }
-        field(1070; "Weather Required"; Boolean)
-        {
-            Caption = 'Weather Required';
-            DataClassification = CustomerContent;
-        }
-        field(1080; "Weather Duration"; Duration)
-        {
-            Caption = 'Weather Duration';
-            DataClassification = CustomerContent;
-
-            trigger OnValidate()
-            begin
-                Message('Onvalidate "Weather Duration"');
-            end;
-
-            trigger OnLookup()
-            begin
-
-            end;
-        }
-        field(1090; "Date Filter"; date)
-        {
-            Caption = 'Date Filter';
-            FieldClass = FlowFilter;
-        }
-        field(2000; Email; Text[50])
-        {
-            DataClassification = CustomerContent;
-            Caption = 'Email';
-            ExtendedDatatype = Masked;
-        }
-        field(2010; "Item No."; Code[20])
-        {
-            DataClassification = CustomerContent;
-            Caption = 'Item No.';
-            TableRelation = Item."No." where("RSH Rental" = const(true));
-
-            trigger OnValidate()
-            begin
-                SetDiscount();
-                OnValidateItemNo();
-            end;
-
-        }
-        field(2015; "Item Description"; Text[50])
-        {
-            FieldClass = FlowField;
-            CalcFormula = lookup(Item.Description where("No." = field("Item No.")));
-            Caption = 'Item Description';
-            Editable = false;
-        }
-        field(2020; "Detail Average Qty"; Decimal)
-        {
-            FieldClass = FlowField;
-            CalcFormula = average("RSH Radio Show detail".Qty where("Radion Show No." = field("No.")));
-            Caption = 'Detail Average Qty';
-            Editable = false;
-        }
-        field(2030; "Detail count Qty"; Integer)
-        {
-            FieldClass = FlowField;
-            CalcFormula = count("RSH Radio Show detail" where("Radion Show No." = field("No.")));
-            Caption = 'Detail count Qty';
-            Editable = false;
-        }
-        field(2040; "Detail sum Qty"; Decimal)
-        {
-            FieldClass = FlowField;
-            CalcFormula = sum("RSH Radio Show detail".Qty where("Radion Show No." = field("No.")));
-            Caption = 'Detail sum Qty';
-            Editable = false;
-        }
-        field(2050; "Customer No."; Code[20])
-        {
-            Caption = 'Customer No.';
-            DataClassification = CustomerContent;
-            TableRelation = Customer;
-
-            trigger OnValidate()
-            begin
-                SetDiscount();
-            end;
-        }
-        field(2055; "Customer Name"; text[100])
-        {
-            Caption = 'Customer No.';
-            DataClassification = CustomerContent;
-            TableRelation = Customer.Name;
-            ValidateTableRelation = false;
-        }
-        field(2060; Discount; Decimal)
-        {
-            Caption = 'Discount';
-            DataClassification = CustomerContent;
-            MinValue = 0;
-            MaxValue = 100;
-        }
     }
     keys
     {
         key(PK; "No.")
         {
             Clustered = true;
-        }
-        key(MyKey; "Royalty Cost")
-        {
-
-        }
-        key(MyKey2; "Royalty Cost", "Advertising Revenue")
-        {
-
         }
     }
 
@@ -264,7 +89,7 @@ table 50000 "RCA Rental Sales"
             exit;
 
         TestNoSeries(RadioShowSetup);
-        NoSeriesMgt.InitSeries(RadioShowSetup."Radio Show Nos.", xRec."No. Series", 0D, "No.", "No. Series");
+        // NoSeriesMgt.InitSeries(RadioShowSetup."Radio Show Nos.", xRec."No. Series", 0D, "No.", "No. Series");
     end;
 
     local procedure TestNoSeries(var RadioShowSetup: Record "RSH Radio Show Setup")
@@ -285,13 +110,13 @@ table 50000 "RCA Rental Sales"
     var
         Item: Record Item;
     begin
-        if Rec."Item No." = '' then
-            Rec.Validate(Saler_name, '')
-        else begin
-            Item.get(Rec."Item No.");
-            CopyFromItem(Item);
-        end;
-        Rec.CalcFields("Item Description");
+        // if Rec."Item No." = '' then
+        //     Rec.Validate(Saler_name, '')
+        // else begin
+        //     Item.get(Rec."Item No.");
+        //     CopyFromItem(Item);
+        // end;
+        // Rec.CalcFields("Item Description");
     end;
 
     local procedure CopyFromItem(Item: Record Item)
@@ -304,17 +129,17 @@ table 50000 "RCA Rental Sales"
         Customer: Record Customer;
         Item: Record Item;
     begin
-        if Rec."Customer No." <> '' then
-            Customer.get("Customer No.");
+        // if Rec."Customer No." <> '' then
+        //     Customer.get("Customer No.");
 
-        if Rec."Item No." <> '' then
-            Item.get("Item No.");
+        // if Rec."Item No." <> '' then
+        //     Item.get("Item No.");
 
-        Rec.Discount := Item."RSH Car Discount";
+        // Rec.Discount := Item."RSH Car Discount";
 
-        if Customer."RSH Car Discount" > Item."RSH Car Discount" then
-            Rec.Discount := Customer."RSH Car Discount";
-        Rec.Validate(Discount);
+        // if Customer."RSH Car Discount" > Item."RSH Car Discount" then
+        //     Rec.Discount := Customer."RSH Car Discount";
+        // Rec.Validate(Discount);
     end;
 
     var
