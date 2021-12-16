@@ -5,7 +5,6 @@ page 50000 "RSH Rental Sales"
     SourceTable = "RCA Rental Sales";
     ApplicationArea = All;
     UsageCategory = Lists;
-    CardPageId = "RSH Radio Show Card";
     // SourceTableView = sorting("Royalty Cost", "Advertising Revenue");
 
     layout
