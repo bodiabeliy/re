@@ -1,4 +1,4 @@
-page 50004 "RCA Rental Car"
+page 50004 "RSH RCA Rental Car"
 {
 
     ApplicationArea = All;
@@ -13,14 +13,14 @@ page 50004 "RCA Rental Car"
         {
             repeater(General)
             {
-                field("Code"; Rec."Code")
+                field("Code"; Rec."No.")
                 {
                     ToolTip = 'Specifies the value of the Code field.';
                     ApplicationArea = All;
                 }
-                field(Description; Rec.Description)
+                field(Description; Rec.Technical_charecteristics)
                 {
-                    ToolTip = 'Specifies the value of the Description field.';
+                    ToolTip = 'Details about current car.';
                     ApplicationArea = All;
                 }
             }
