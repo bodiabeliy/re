@@ -36,9 +36,9 @@ page 50000 "RSH Rental Sales"
                     ApplicationArea = All;
                     Visible = false;
                 }
-                field("Host No."; Rec."Host No.")
+                field("Host No."; Rec."Car_code")
                 {
-                    ToolTip = 'Specifies the value of the Host No. field.';
+                    ToolTip = 'Registred car number';
                     ApplicationArea = All;
                 }
             }

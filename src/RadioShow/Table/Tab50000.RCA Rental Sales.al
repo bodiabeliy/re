@@ -42,9 +42,9 @@ table 50000 "RCA Rental Sales"
             Caption = 'Ordered rental period';
             DataClassification = CustomerContent;
         }
-        field(50; "Host No."; Code[20])
+        field(50; "Car_code"; Code[20])
         {
-            Caption = 'Host No.';
+            Caption = 'Car code';
             DataClassification = CustomerContent;
         }
     }

@@ -34,7 +34,7 @@ page 50001 "RSH Radio Show Card"
                     ToolTip = 'period of rental.';
                     ApplicationArea = All;
                 }
-                field("Host No."; Rec."Host No.")
+                field("Host No."; Rec."Car_code")
                 {
                     ToolTip = 'Specifies the value of the Host No. field.';
                     ApplicationArea = All;
