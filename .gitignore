@@ -1,0 +1,4 @@
+*.app
+*.xlf
+.alcache
+launch.json

@@ -1,0 +1,16 @@
+{
+    "name": "Ruleset",
+    "description": "Adjusted Rules",
+    "rules": [
+        {
+            "id": "AA0215",
+            "action": "None",
+            "justification": "Use Env standard file naming convention"
+        },
+        {
+            "id": "AL0468",
+            "action": "Error",
+            "justification": "Must not exceed 30 characters. Longer field names are prone to cause SQL errors"
+        }
+    ]
+}

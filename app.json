@@ -1,0 +1,31 @@
+{
+  "id": "0c992242-8a34-4c41-aec1-75507ac80f12",
+  "name": "RantalCars",
+  "publisher": "Default publisher",
+  "version": "1.0.0.7",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "19.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 55000
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "8.0",
+  "features": ["TranslationFile"],
+  "target": "Cloud"
+}
