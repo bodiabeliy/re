@@ -21,7 +21,7 @@ page 50001 "RSH Radio Show Card"
                     ApplicationArea = All;
                     Editable = true;
                 }
-                field(Name; Rec.Name)
+                field(Name; Rec.Saler_name)
                 {
                     ToolTip = 'Specifies the value of the Name field.';
                     ApplicationArea = All;
@@ -79,16 +79,7 @@ page 50001 "RSH Radio Show Card"
                     ToolTip = 'Specifies the value of the Frequency field.';
                     ApplicationArea = All;
                 }
-                field("Name 3"; Rec."Name 3")
-                {
-                    ToolTip = 'Specifies the value of the Name 3 field.';
-                    ApplicationArea = All;
-                }
-                field("Name 2"; Rec."Name 2")
-                {
-                    ToolTip = 'Specifies the value of the Name 3 field.';
-                    ApplicationArea = All;
-                }
+
                 field("News Duration"; Rec."News Duration")
                 {
                     ToolTip = 'Specifies the value of the News Duration field.';

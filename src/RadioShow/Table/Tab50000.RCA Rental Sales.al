@@ -31,22 +31,13 @@ table 50000 "RCA Rental Sales"
             DataClassification = CustomerContent;
             Editable = false;
         }
-        field(20; Name; Text[50])
+        field(20; Saler_name; Text[30])
         {
-            Caption = 'Name';
+            Caption = 'Saler name';
             DataClassification = CustomerContent;
             NotBlank = true;
         }
-        field(21; "Name 2"; Text[50])
-        {
-            Caption = 'Name 2';
-            DataClassification = CustomerContent;
-        }
-        field(22; "Name 3"; Text[50])
-        {
-            Caption = 'Name 3';
-            DataClassification = CustomerContent;
-        }
+
         field(40; "Run Time"; Duration)
         {
             Caption = 'Run Time';
@@ -247,7 +238,7 @@ table 50000 "RCA Rental Sales"
 
     fieldgroups
     {
-        fieldgroup(DropDown; "No.", Name, "Host Name")
+        fieldgroup(DropDown; "No.", Saler_name, "Host Name")
         {
 
         }
@@ -295,7 +286,7 @@ table 50000 "RCA Rental Sales"
         Item: Record Item;
     begin
         if Rec."Item No." = '' then
-            Rec.Validate(Name, '')
+            Rec.Validate(Saler_name, '')
         else begin
             Item.get(Rec."Item No.");
             CopyFromItem(Item);
@@ -305,7 +296,7 @@ table 50000 "RCA Rental Sales"
 
     local procedure CopyFromItem(Item: Record Item)
     begin
-        Rec.Validate(Name, Item.Description);
+        Rec.Validate(Saler_name, Item.Description);
     end;
 
     local procedure SetDiscount()

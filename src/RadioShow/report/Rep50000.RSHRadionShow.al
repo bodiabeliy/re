@@ -15,7 +15,7 @@ report 50000 "RSH Radion Show"
             {
                 IncludeCaption = true;
             }
-            column(Name; Name)
+            column(Name; Saler_name)
             {
             }
             column(NameCaption; NameLbl)
