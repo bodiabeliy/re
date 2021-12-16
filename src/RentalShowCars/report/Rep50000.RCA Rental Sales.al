@@ -1,10 +1,10 @@
-report 50000 "RSH Radion Show"
+report 50000 "RCA Rental sales"
 {
     ApplicationArea = All;
     Caption = 'Radion Show';
     UsageCategory = ReportsAndAnalysis;
-    WordLayout = 'src\RadioShow\layout\RadioShow.docx';
-    RDLCLayout = 'src\RadioShow\layout\RadioShow.rdlc';
+    WordLayout = 'src\RentalShowCars\GeneralInfo.docx';
+    RDLCLayout = 'src\RentalShowCars\GeneralInfo.rdlc';
     DefaultLayout = RDLC;
 
     dataset

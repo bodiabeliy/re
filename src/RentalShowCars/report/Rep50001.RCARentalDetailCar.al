@@ -1,7 +1,7 @@
-report 50001 "RSH Radion Show Mgt."
+report 50001 "RCA Rental Utils"
 {
     ProcessingOnly = true;
-    procedure DeleteRadioShowdetail(RadionShowNo: Code[20])
+    procedure DeleteDetail(RentalSalesNo: Code[20])
     // var
     //     RSHRadioShowdetail: Record "RSH Radio Show detail";
     begin

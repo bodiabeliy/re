@@ -1,4 +1,4 @@
-// 
+//збірна таблиця інформації щодо покупців та продавців
 table 50000 "RSH RCA Rental Sales"
 {
     Caption = 'Rental Order Cars';
@@ -11,7 +11,7 @@ table 50000 "RSH RCA Rental Sales"
         {
             Caption = '№.';
             DataClassification = CustomerContent;
-
+            // тригер валідації (перевірка) відсотрованих даних
             trigger OnValidate()
             var
                 RetalSetup: Record "RSH Rental Car Setup";
@@ -63,6 +63,7 @@ table 50000 "RSH RCA Rental Sales"
 
         }
     }
+    // вставка полів
     trigger OnInsert()
     begin
         InitInsert();
@@ -70,20 +71,20 @@ table 50000 "RSH RCA Rental Sales"
 
     trigger OnDelete()
     var
-        RSHRadionShowMgt: Report "RSH Radion Show Mgt.";
+        ToDeleteSales: Report "RCA Rental Utils";
     begin
-        RSHRadionShowMgt.DeleteRadioShowdetail(Rec."No.");
+        ToDeleteSales.DeleteDetail(Rec."No.");
     end;
 
     local procedure InitInsert()
     var
-        RadioShowSetup: Record "RSH Rental Car Setup";
+        RentalSetup: Record "RSH Rental Car Setup";
         NoSeriesMgt: Codeunit NoSeriesManagement;
     begin
         if "No." <> '' then
             exit;
 
-        TestNoSeries(RadioShowSetup);
+        TestNoSeries(RentalSetup);
         // NoSeriesMgt.InitSeries(RadioShowSetup."Radio Show Nos.", xRec."No. Series", 0D, "No.", "No. Series");
     end;
 
