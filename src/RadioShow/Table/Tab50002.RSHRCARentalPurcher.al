@@ -9,21 +9,20 @@ Table 50002 "RSH RCA Rental Purcher"
             DataClassification = CustomerContent;
             Caption = '№';
         }
-        field(20; "Register_code"; Code[20])
+        field(20; "purcher_name"; Code[20])
         {
-            Enabled = false;
             DataClassification = CustomerContent;
-            Caption = 'Register code';
+            Caption = 'purcher_name';
         }
-        field(30; "Technical_charecteristics"; Text[200])
+        field(30; "rental_cars"; Text[200])
         {
             DataClassification = CustomerContent;
-            Caption = 'Technical charecteristics';
+            Caption = 'Retal cars';
         }
-        field(40; "Rental_price"; Date)
+        field(40; "Rental_document"; Date)
         {
             DataClassification = CustomerContent;
-            Caption = 'Rental price';
+            Caption = 'Rental document';
         }
     }
 
