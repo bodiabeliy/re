@@ -4,7 +4,7 @@ page 50004 "RSH Radio Show Types"
     ApplicationArea = All;
     Caption = 'Radio Show Type';
     PageType = List;
-    SourceTable = "RCA Rental Order Cars";
+    SourceTable = "RCA Rental Order Car";
     UsageCategory = Administration;
 
     layout

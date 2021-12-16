@@ -25,7 +25,7 @@ table 50000 "RCA Rental Sales"
         }
         field(10; "Order number"; Code[10])
         {
-            TableRelation = "RCA Rental Order Cars";
+            TableRelation = "RCA Rental Order Car";
             Caption = 'Order number';
             DataClassification = CustomerContent;
             Editable = false;

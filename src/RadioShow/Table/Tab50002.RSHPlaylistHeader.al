@@ -1,4 +1,4 @@
-Table 50002 "RSH Playlist Header"
+Table 50002 "RCA Rental Purcher"
 {
     DataClassification = CustomerContent;
 
