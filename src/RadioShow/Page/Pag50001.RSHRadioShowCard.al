@@ -15,7 +15,7 @@ page 50001 "RSH Radio Show Card"
                     ToolTip = 'Specifies the value of the No. field.';
                     ApplicationArea = All;
                 }
-                field("Radio Show Type"; Rec."Radio Show Type")
+                field("Radio Show Type"; Rec."Order number")
                 {
                     ToolTip = 'Specifies the value of the Radio Show Type field.';
                     ApplicationArea = All;

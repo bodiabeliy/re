@@ -1,6 +1,6 @@
 table 50000 "RCA Rental Sales"
 {
-    Caption = 'Radio Show';
+    Caption = 'Rental Order Cars';
     DataClassification = CustomerContent;
     // LookupPageId = "Rental Sales";
     // DrillDownPageId = "Rental Sales";
@@ -24,7 +24,7 @@ table 50000 "RCA Rental Sales"
                 end;
             end;
         }
-        field(10; "Radio Show Type"; Code[10])
+        field(10; "Order number"; Code[10])
         {
             TableRelation = "RCA Rental Order Cars";
             Caption = 'Order number';
