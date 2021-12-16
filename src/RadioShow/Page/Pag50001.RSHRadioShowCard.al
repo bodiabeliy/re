@@ -39,12 +39,6 @@ page 50001 "RSH Radio Show Card"
                     ToolTip = 'Specifies the value of the Host No. field.';
                     ApplicationArea = All;
                 }
-                field("Host Name"; Rec."Host Name")
-                {
-                    ToolTip = 'Specifies the value of the Host Name field.';
-                    ApplicationArea = All;
-                }
-
             }
             part(SalesLines; "RSH Radio Show detail")
             {

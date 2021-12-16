@@ -21,12 +21,6 @@ report 50000 "RSH Radion Show"
             column(NameCaption; NameLbl)
             {
             }
-            column(HostName; "Host Name")
-            {
-            }
-            column(HostNameCaption; RSHRadioShow.FieldCaption("Host Name"))
-            {
-            }
         }
     }
     var

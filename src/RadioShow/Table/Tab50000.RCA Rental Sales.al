@@ -47,11 +47,6 @@ table 50000 "RCA Rental Sales"
             Caption = 'Host No.';
             DataClassification = CustomerContent;
         }
-        field(60; "Host Name"; Text[50])
-        {
-            Caption = 'Host Name';
-            DataClassification = CustomerContent;
-        }
     }
     keys
     {
@@ -63,7 +58,7 @@ table 50000 "RCA Rental Sales"
 
     fieldgroups
     {
-        fieldgroup(DropDown; "No.", Saler_name, "Host Name")
+        fieldgroup(DropDown; "No.", Saler_name)
         {
 
         }

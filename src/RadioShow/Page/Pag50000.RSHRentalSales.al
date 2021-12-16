@@ -41,11 +41,6 @@ page 50000 "RSH Rental Sales"
                     ToolTip = 'Specifies the value of the Host No. field.';
                     ApplicationArea = All;
                 }
-                field("Host Name"; Rec."Host Name")
-                {
-                    ToolTip = 'Specifies the value of the Host Name field.';
-                    ApplicationArea = All;
-                }
             }
         }
     }
