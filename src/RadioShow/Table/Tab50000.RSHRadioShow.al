@@ -9,7 +9,7 @@ table 50000 "RCA Rental Sales"
     {
         field(1; "No."; Code[20])
         {
-            Caption = 'No.', comment = 'ESP="Code."';
+            Caption = '№.';
             DataClassification = CustomerContent;
 
             trigger OnValidate()
@@ -26,8 +26,8 @@ table 50000 "RCA Rental Sales"
         }
         field(10; "Radio Show Type"; Code[10])
         {
-            TableRelation = "RSH Radio Show Type";
-            Caption = 'Radio Show Type';
+            TableRelation = "RCA Rental Order Cars";
+            Caption = 'Order number';
             DataClassification = CustomerContent;
             Editable = false;
         }

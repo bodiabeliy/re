@@ -27,7 +27,7 @@ table 50008 "RSH Posted Radio Show"
         }
         field(10; "Radio Show Type"; Code[10])
         {
-            TableRelation = "RSH Radio Show Type";
+            TableRelation = "RCA Rental Order Cars";
             Caption = 'Radio Show Type';
             DataClassification = CustomerContent;
             Editable = false;

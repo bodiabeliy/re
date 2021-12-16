@@ -1,6 +1,6 @@
 page 50000 "RSH Rental Sales"
 {
-    Caption = 'Radio Shows List';
+    Caption = 'Rental Sales List';
     PageType = List;
     SourceTable = "RCA Rental Sales";
     ApplicationArea = All;

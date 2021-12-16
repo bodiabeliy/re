@@ -1,4 +1,4 @@
-Table 50001 "RSH Radio Show Type"
+Table 50001 "RCA Rental Order Cars"
 {
     DataClassification = CustomerContent;
     DrillDownPageID = "RSH Radio Show Types";
