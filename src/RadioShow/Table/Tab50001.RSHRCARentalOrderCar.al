@@ -1,8 +1,8 @@
-Table 50001 "RCA Rental Order Car"
+Table 50001 "RSH RCA Rental Order Car"
 {
     DataClassification = CustomerContent;
-    DrillDownPageID = "RSH Radio Show Types";
-    LookupPageID = "RSH Radio Show Types";
+    DrillDownPageID = "RCA Rental Car";
+    LookupPageID = "RCA Rental Car";
 
     fields
     {
