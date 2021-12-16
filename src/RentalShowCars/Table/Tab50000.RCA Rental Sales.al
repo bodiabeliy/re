@@ -1,3 +1,4 @@
+// 
 table 50000 "RCA Rental Sales"
 {
     Caption = 'Rental Order Cars';
