@@ -1,4 +1,4 @@
-page 50000 "RSH Radio Show List"
+page 50000 "RSH Rental Sales"
 {
     Caption = 'Radio Shows List';
     PageType = List;
@@ -40,7 +40,6 @@ page 50000 "RSH Radio Show List"
                 {
                     ToolTip = 'Specifies the value of the Host No. field.';
                     ApplicationArea = All;
-                    Visible = ShowCustField;
                 }
                 field("Host Name"; Rec."Host Name")
                 {
@@ -126,13 +125,13 @@ page 50000 "RSH Radio Show List"
         }
     }
 
-    trigger OnOpenPage()
-    begin
-        Rec.SetCurrentKey("Royalty Cost", "Advertising Revenue");
-        ShowCustField := true;
-    end;
+    //     trigger OnOpenPage()
+    //     begin
+    //         Rec.SetCurrentKey("Royalty Cost", "Advertising Revenue");
+    //         ShowCustField := true;
+    //     end;
 
-    var
-        v: Record AllObjWithCaption;
-        ShowCustField: Boolean;
+    //     var
+    //         v: Record AllObjWithCaption;
+    //         ShowCustField: Boolean;
 }

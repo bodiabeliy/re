@@ -2,8 +2,8 @@ table 50008 "RSH Posted Radio Show"
 {
     Caption = 'Posted Radio Show';
     DataClassification = CustomerContent;
-    LookupPageId = "RSH Radio Show List";
-    DrillDownPageId = "RSH Radio Show List";
+    // LookupPageId = "Rental Sales";
+    // DrillDownPageId = "Rental Sales";
 
     fields
     {
