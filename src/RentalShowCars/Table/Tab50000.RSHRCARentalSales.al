@@ -19,7 +19,7 @@ table 50000 "RSH RCA Rental Sales"
             begin
                 if "No." <> xRec."No." then begin
                     TestNoSeries(RetalSetup);
-                    NoSeriesMgt.TestManual(RetalSetup."Radio Show Nos.");
+                    NoSeriesMgt.TestManual(RetalSetup."Rental Nos.");
                 end;
             end;
         }
@@ -96,7 +96,7 @@ table 50000 "RSH RCA Rental Sales"
             RadioShowSetup.Insert();
             Commit();
         end;
-        RadioShowSetup.TestField("Radio Show Nos.");
+        RadioShowSetup.TestField("Rental Nos.");
         IF true THEN;
         // if RadioShowSetup."Radio Show Nos    ." = '' then
         //     Error(RadioShowNosErr, RadioShowSetup.FieldCaption("Radio Show Nos."), RadioShowSetup.TableCaption());

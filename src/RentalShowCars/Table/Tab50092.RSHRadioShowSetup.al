@@ -10,9 +10,9 @@ table 50092 "RSH Rental Car Setup"
             Caption = 'Code';
             DataClassification = CustomerContent;
         }
-        field(2; "Radio Show Nos."; Code[20])
+        field(2; "Rental Nos."; Code[20])
         {
-            Caption = 'Radio Show Nos.';
+            Caption = 'Rental Nos.';
             DataClassification = CustomerContent;
             TableRelation = "No. Series";
         }

@@ -13,9 +13,9 @@ page 50003 "RSH Radio Show Setup"
         {
             group(Numberig)
             {
-                field("Radio Show Nos."; Rec."Radio Show Nos.")
+                field("Radio Show Nos."; Rec."Rental Nos.")
                 {
-                    ToolTip = 'Specifies the value of the Radio Show Nos. field.';
+                    ToolTip = 'Sorted field.';
                     ApplicationArea = All;
                 }
             }
