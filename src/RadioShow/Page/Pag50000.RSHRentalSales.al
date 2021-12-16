@@ -32,7 +32,7 @@ page 50000 "RSH Rental Sales"
                 }
                 field("Run Time"; Rec."Ordered_rental_period")
                 {
-                    ToolTip = 'Specifies the value of the Run Time field.';
+                    ToolTip = 'Period of renting of car.';
                     ApplicationArea = All;
                     Visible = false;
                 }
