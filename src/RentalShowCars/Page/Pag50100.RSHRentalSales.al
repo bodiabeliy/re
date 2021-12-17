@@ -1,3 +1,4 @@
+// сторінка ореди авто
 page 50100 "RSH Rental Sales"
 {
     Caption = 'Rental Sales List';

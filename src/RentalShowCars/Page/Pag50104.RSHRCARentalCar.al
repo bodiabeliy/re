@@ -1,9 +1,11 @@
+
+// сторінка з інформацією про окремий автомобіль
 page 50104 "RSH RCA Rental Car"
 {
 
     ApplicationArea = All;
     Caption = 'Rental Cars';
-    PageType = List;
+    PageType = Card;
     SourceTable = "RSH RCA Rental Order Car";
     UsageCategory = Administration;
 

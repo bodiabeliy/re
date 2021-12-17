@@ -37,5 +37,19 @@ Table 50005 "RSH RCA Rental Discounts"
     fieldgroups
     {
     }
+    // встановлення загальної вартості (ціни)
+    local procedure SetDiscountPrice()
+    var
+        totalPrice: Record "RSH RCA Rental Order Car";
+    begin
+        if Rec.customer_name <> '' then
+            totalPrice.get("No.");
+
+        if Rec."customer_name" <> '' then
+            totalPrice.get("Total price");
+
+        Rec.Validate(discount);
+        SetDiscountPrice()
+    end;
 }
 

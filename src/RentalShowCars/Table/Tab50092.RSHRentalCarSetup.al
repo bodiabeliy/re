@@ -1,6 +1,7 @@
+// таблиця авто (не відфільтрована по показникам)
 table 50092 "RSH Rental Car Setup"
 {
-    Caption = 'Radio Show Setup';
+    Caption = 'Car setup';
     DataClassification = ToBeClassified;
 
     fields
@@ -10,11 +11,11 @@ table 50092 "RSH Rental Car Setup"
             Caption = 'Code';
             DataClassification = CustomerContent;
         }
-        field(2; "Rental Nos."; Code[20])
+        field(2; "Rental Car information"; Code[20])
         {
-            Caption = 'Rental Nos.';
+            Caption = 'Rental information.';
             DataClassification = CustomerContent;
-            TableRelation = "No. Series";
+            TableRelation = "RSH RCA Rental Order Car";
         }
     }
     keys

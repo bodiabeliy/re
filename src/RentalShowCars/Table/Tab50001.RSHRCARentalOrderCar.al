@@ -1,3 +1,4 @@
+// таблиця зі списком усіх авто
 Table 50001 "RSH RCA Rental Order Car"
 {
     DataClassification = CustomerContent;
@@ -22,7 +23,7 @@ Table 50001 "RSH RCA Rental Order Car"
             DataClassification = CustomerContent;
             Caption = 'Technical charecteristics';
         }
-        field(40; "Rental_price"; Date)
+        field(40; "Rental_price"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Rental price';

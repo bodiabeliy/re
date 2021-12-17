@@ -18,8 +18,8 @@ table 50000 "RSH RCA Rental Sales"
                 NoSeriesMgt: Codeunit NoSeriesManagement;
             begin
                 if "No." <> xRec."No." then begin
-                    TestNoSeries(RetalSetup);
-                    NoSeriesMgt.TestManual(RetalSetup."Rental Nos.");
+                    NoRegistred(RetalSetup);
+                    NoSeriesMgt.TestManual(RetalSetup."Rental Car information");
                 end;
             end;
         }
@@ -71,7 +71,7 @@ table 50000 "RSH RCA Rental Sales"
 
     trigger OnDelete()
     var
-        ToDeleteSales: Report "RCA Rental Utils";
+        ToDeleteSales: Report "RSH RCA Rental Utils";
     begin
         ToDeleteSales.DeleteDetail(Rec."No.");
     end;
@@ -84,66 +84,40 @@ table 50000 "RSH RCA Rental Sales"
         if "No." <> '' then
             exit;
 
-        TestNoSeries(RentalSetup);
-        // NoSeriesMgt.InitSeries(RadioShowSetup."Radio Show Nos.", xRec."No. Series", 0D, "No.", "No. Series");
+        NoRegistred(RentalSetup);
     end;
 
-    local procedure TestNoSeries(var RadioShowSetup: Record "RSH Rental Car Setup")
-    // var
-    //     RadioShowNosErr: Label 'The field %1 should not be empty in Table %2!', Comment = '%1 = fieldCaption,%2 = TableCaption';
+    local procedure NoRegistred(var RentalSalesSetup: Record "RSH Rental Car Setup")
+    var
+        RentalShowNosErr: Label 'The field should not be empty in Table!';
     begin
-        if not RadioShowSetup.get() then begin
-            RadioShowSetup.Insert();
+        if not RentalSalesSetup.get() then begin
+            RentalSalesSetup.Insert();
             Commit();
         end;
-        RadioShowSetup.TestField("Rental Nos.");
+        RentalSalesSetup.TestField("Rental Car information");
         IF true THEN;
-        // if RadioShowSetup."Radio Show Nos    ." = '' then
-        //     Error(RadioShowNosErr, RadioShowSetup.FieldCaption("Radio Show Nos."), RadioShowSetup.TableCaption());
+        if RentalSalesSetup."Rental Car information" = '' then
+            Error(RentalShowNosErr, RentalSalesSetup.FieldCaption("Rental Car information"), RentalSalesSetup.TableCaption());
+        //
+        OnValidateRrcord()
     end;
-
-    local procedure OnValidateItemNo()
+    //
+    local procedure OnValidateRrcord()
     var
         Item: Record Item;
     begin
-        // if Rec."Item No." = '' then
-        //     Rec.Validate(Saler_name, '')
-        // else begin
-        //     Item.get(Rec."Item No.");
-        //     CopyFromItem(Item);
-        // end;
-        // Rec.CalcFields("Item Description");
+        if Rec."No." = '' then
+            Rec.Validate(Saler_name, '')
+        else begin
+            Item.get(Rec."No.");
+            RentalCarsField(Item);
+        end;
+        Rec.CalcFields("Order number");
     end;
 
-    local procedure CopyFromItem(Item: Record Item)
+    local procedure RentalCarsField(Item: Record Item)
     begin
         Rec.Validate(Saler_name, Item.Description);
-    end;
-
-    local procedure SetDiscount()
-    var
-        Customer: Record Customer;
-        Item: Record Item;
-    begin
-        // if Rec."Customer No." <> '' then
-        //     Customer.get("Customer No.");
-
-        // if Rec."Item No." <> '' then
-        //     Item.get("Item No.");
-
-        // Rec.Discount := Item."RSH Car Discount";
-
-        // if Customer."RSH Car Discount" > Item."RSH Car Discount" then
-        //     Rec.Discount := Customer."RSH Car Discount";
-        // Rec.Validate(Discount);
-    end;
-
-    var
-        testTxt: text;
-
-
-    [IntegrationEvent(TRUE, TRUE)]
-    local procedure MyProcedure()
-    begin
     end;
 }

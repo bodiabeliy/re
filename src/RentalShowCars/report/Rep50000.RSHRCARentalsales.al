@@ -1,15 +1,16 @@
-report 50000 "RCA Rental sales"
+// звіт щодо інформації оренди між продавцем і покупцем
+report 50000 "RSH RCA Rental sales"
 {
     ApplicationArea = All;
     Caption = 'Radion Show';
     UsageCategory = ReportsAndAnalysis;
     WordLayout = 'src\RentalShowCars\GeneralInfo.docx';
     RDLCLayout = 'src\RentalShowCars\GeneralInfo.rdlc';
-    DefaultLayout = RDLC;
+    DefaultLayout = Word;
 
     dataset
     {
-        dataitem(RSHRadioShow; "RSH RCA Rental Sales")
+        dataitem("RSH RCA Rental Order Car"; "RSH RCA Rental Sales")
         {
             column(No; "No.")
             {
@@ -18,11 +19,14 @@ report 50000 "RCA Rental sales"
             column(Name; Saler_name)
             {
             }
-            column(NameCaption; NameLbl)
+            column(rental_date; "Ordered_rental_period")
             {
             }
+            column(Registred_code; "Car_code")
+            {
+            }
+
         }
     }
-    var
-        NameLbl: Label 'Name';
+
 }

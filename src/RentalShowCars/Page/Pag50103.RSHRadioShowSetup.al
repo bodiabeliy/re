@@ -13,7 +13,7 @@ page 50103 "RSH Radio Show Setup"
         {
             group(Numberig)
             {
-                field("Radio Show Nos."; Rec."Rental Nos.")
+                field("Radio Show Nos."; Rec."Rental Car information")
                 {
                     ToolTip = 'Sorted field.';
                     ApplicationArea = All;

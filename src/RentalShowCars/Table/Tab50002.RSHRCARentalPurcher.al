@@ -1,3 +1,5 @@
+
+// таблиця з інформацією про окремого покупця
 Table 50002 "RSH RCA Rental Purcher"
 {
     DataClassification = CustomerContent;
