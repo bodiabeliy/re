@@ -1,4 +1,4 @@
-page 50000 "RSH Rental Sales"
+page 50100 "RSH Rental Sales"
 {
     Caption = 'Rental Sales List';
     PageType = List;
