@@ -81,8 +81,11 @@ End Function
         <Field Name="Name">
           <DataField>Name</DataField>
         </Field>
-        <Field Name="NameCaption">
-          <DataField>NameCaption</DataField>
+        <Field Name="rental_date">
+          <DataField>rental_date</DataField>
+        </Field>
+        <Field Name="Registred_code">
+          <DataField>Registred_code</DataField>
         </Field>
       </Fields>
       <Query>

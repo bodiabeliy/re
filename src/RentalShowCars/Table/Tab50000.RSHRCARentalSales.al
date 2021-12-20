@@ -47,6 +47,11 @@ table 50000 "RSH RCA Rental Sales"
             Caption = 'Car code';
             DataClassification = CustomerContent;
         }
+        field(60; "Discount_price"; Decimal)
+        {
+            Caption = 'Rental Price';
+            DataClassification = CustomerContent;
+        }
     }
     keys
     {

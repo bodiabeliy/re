@@ -2,10 +2,10 @@
 report 50000 "RSH RCA Rental sales"
 {
     ApplicationArea = All;
-    Caption = 'Radion Show';
+    Caption = 'Customer profit';
     UsageCategory = ReportsAndAnalysis;
-    WordLayout = 'src\RentalShowCars\GeneralInfo.docx';
-    RDLCLayout = 'src\RentalShowCars\GeneralInfo.rdlc';
+    WordLayout = 'src\RentalShowCars\CustomerProfit.docx';
+    RDLCLayout = 'src\RentalShowCars\CustomerProfit.rdlc';
     DefaultLayout = Word;
 
     dataset
@@ -16,13 +16,16 @@ report 50000 "RSH RCA Rental sales"
             {
                 IncludeCaption = true;
             }
+            column(Registred_code; "Car_code")
+            {
+            }
             column(Name; Saler_name)
             {
             }
             column(rental_date; "Ordered_rental_period")
             {
             }
-            column(Registred_code; "Car_code")
+            column(Total_price; "Discount_price")
             {
             }
 
