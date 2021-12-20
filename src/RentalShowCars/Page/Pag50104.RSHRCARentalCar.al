@@ -4,7 +4,7 @@ page 50104 "RSH RCA Rental Car"
 {
 
     ApplicationArea = All;
-    Caption = 'Rental Cars';
+    Caption = 'Rental Car';
     PageType = Card;
     SourceTable = "RSH RCA Rental Order Car";
     UsageCategory = Administration;
@@ -25,8 +25,23 @@ page 50104 "RSH RCA Rental Car"
                     ToolTip = 'Details about current car.';
                     ApplicationArea = All;
                 }
+
+
+            }
+
+        }
+    }
+    actions
+    {
+        area(Processing)
+        {
+            action(ImportData)
+            {
+                ApplicationArea = All;
+
+                RunObject = xmlport
+
             }
         }
     }
-
 }
